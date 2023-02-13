@@ -1,0 +1,58 @@
+<div
+  class="container"
+  *ngIf="detailsEntity$ | async as entity">
+
+  <button class="btn btn-primary" routerLink="/">Go Back</button>
+  <h1 class="my-4">{{ entity.name }}
+    <small>
+      <span class="badge bg-primary rating">
+        {{ entity.rating }}/10
+      </span>
+    </small>
+  </h1>
+  <a href="#">{{entity.totalEpisodes}} episodes</a>
+
+  <div class="row">
+
+    <div class="col-md-5">
+      <img
+        class="img img-fluid img-thumbnail"
+        [src]="entity.imagePath"
+        [alt]="entity.name">
+    </div>
+
+    <div class="col-md-6">
+      <span style="margin-right:10px;" class="badge bg-primary rounded-pill" *ngFor="let genre of entity.genres">
+        {{ genre.name }}
+      </span>
+      <h2 style="font-weight: bolder; margin-top:10px; margin-bottom:10px;">Plot:</h2>
+      {{ entity.description?entity.description:'No plot available at this time' }}
+
+      <!-- <h3 class="my-3">Ratings</h3>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let rating of entity.Ratings">
+          {{ rating.Source }} - {{ rating.Value }}
+        </li>
+      </ul> -->
+    </div>
+
+  </div>
+
+  <!-- Related Projects Row -->
+  <div *ngIf="similarShows">
+    <h1 style="margin-top: 20px;">Similar to this</h1>
+    <div class="list-cards similar-items-container" [class.show]="!showMoreFlag">
+      <app-item *ngFor="let show of similarShows;let i=index" [show]="show">
+
+      </app-item>
+  </div>
+  <div style="text-align:center; margin: 20px 0px;">
+    <button class="btn btn-primary" *ngIf="showMoreFlag" type="button" (click)="showMoreFlag=false">Show More</button>
+  </div>
+
+
+  </div>
+</div>
+<!-- /.container -->

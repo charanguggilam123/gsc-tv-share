@@ -1,0 +1,8 @@
+<div class="container">
+    <h4>Trending</h4>
+    <div class="list-cards">
+        <app-item *ngFor="let show of trendingShows$ |async;let i=index" [show]="show" [footerText]="(i+1).toString()">
+
+        </app-item>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* .search-results{
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 50;
+} */
+
+.search-results{
+  background-color: aqua;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  z-index: 1;
+  box-shadow: 2px 0px 2px 0px rgba(0,0,0,0.1);
+}
+
+.search-item{
+  display: block;
+  z-index: 1;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
+}

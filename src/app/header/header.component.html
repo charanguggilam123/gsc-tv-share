@@ -1,0 +1,11 @@
+<nav class="nav-bar">
+    <p>gsc-tv-share</p>
+    <div>
+      <input (keyup)="onSearch($event)" type="search" name="search" placeholder="{{search}} Search" id="">
+      <div class="search-results" *ngFor="let searchItem of searchResults">
+        <p class="search-item">{{searchItem}}</p>
+      </div>
+
+    </div>
+
+</nav>

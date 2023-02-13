@@ -1,5 +1,12 @@
 # GscTvShare
 
+References:
+
+1. Angular: https://angular.io/docs
+2. Bootstrap: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+3. NgRx: https://ngrx.io/docs
+4. RxJs: https://www.learnrxjs.io/learn-rxjs/operators
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
 ## Development server

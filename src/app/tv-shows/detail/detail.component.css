@@ -1,0 +1,26 @@
+.list-cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.rating::before{
+  content: "\2605";
+  color: gold;
+}
+
+/* img{
+  height: 650px
+
+} */
+
+.similar-items-container {
+  height: 400px;
+  overflow: hidden;
+}
+
+.show {
+  overflow: visible;
+  height: auto;
+}

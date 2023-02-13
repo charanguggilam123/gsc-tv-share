@@ -1,0 +1,10 @@
+<mat-card>
+    <a style="cursor: pointer ;" [routerLink]="['/tv-shows',show.id,'detail']">
+    <img mat-card-image clas="item-img" src="{{show.imagePath}}" alt="" onerror="this.onerror=null; this.src='assets/NoImage.jpg';" >
+    </a>
+    <mat-card-footer class="rate-text">
+        <!-- {{footerText? footerText : 'Rate'}} -->
+        <p *ngIf="footerText" style="text-align: left; margin-left:5% ; font-size: 50px;">{{footerText}}</p>
+        <p *ngIf="!footerText" class="default-footer">Rate</p>
+    </mat-card-footer>
+</mat-card>
